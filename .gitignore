@@ -11,3 +11,4 @@ recording.py
 text2speech.py
 whisp_transcription.py
 venv
+.env
