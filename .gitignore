@@ -7,8 +7,8 @@ jackhammer.wav
 key.json
 main.py
 output.wav
+recording.wav
 recording.py
 text2speech.py
-whisp_transcription.py
 venv
 .env

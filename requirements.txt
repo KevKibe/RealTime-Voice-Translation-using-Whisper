@@ -6,8 +6,17 @@ googletrans
 pyaudio
 translate
 google-cloud-translate==2.0.1
-fastapi
 elevenlabs
 python-dotenv
 google-cloud
-# RealtimeTTS
+flask
+networkx==2.8.8
+typing_extensions==4.8.0
+fsspec==2023.6.0
+imageio==2.31.6
+networkx==2.8.8
+numpy==1.24.3
+requests==2.31.0
+RealtimeTTS
+streamlit
+playsound==1.2.2
