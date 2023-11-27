@@ -1,3 +1,5 @@
+portaudio19-dev
+python3-all-dev
 openai-whisper
 sounddevice
 wavio
