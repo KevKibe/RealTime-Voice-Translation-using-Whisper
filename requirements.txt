@@ -2,10 +2,10 @@ openai-whisper
 sounddevice
 wavio
 scipy
-googletrans
-pyaudio
-translate
-google-cloud-translate==2.0.1
+# googletrans
+# pyaudio
+# translate
+# google-cloud-translate==2.0.1
 elevenlabs
 python-dotenv
 google-cloud
