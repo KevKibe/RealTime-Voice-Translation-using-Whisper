@@ -1,4 +1,5 @@
-portaudio19-dev
+# portaudio19-dev
+pip==23.3.1
 python3-all-dev
 openai-whisper
 sounddevice
