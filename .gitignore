@@ -12,3 +12,4 @@ recording.py
 text2speech.py
 venv
 .env
+test
