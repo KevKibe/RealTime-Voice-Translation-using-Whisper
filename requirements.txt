@@ -1,6 +1,6 @@
 openai-whisper
 pygobject
-pycairo
+#pycairo
 sounddevice
 wavio
 scipy
