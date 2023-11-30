@@ -20,3 +20,4 @@ RealtimeTTS
 streamlit
 playsound==1.2.2
 #pygobject
+python3-gi
