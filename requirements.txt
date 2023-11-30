@@ -1,5 +1,4 @@
 openai-whisper
-pygobject
 #pycairo
 sounddevice
 wavio
@@ -19,3 +18,4 @@ requests==2.31.0
 RealtimeTTS
 streamlit
 playsound==1.2.2
+pygobject
