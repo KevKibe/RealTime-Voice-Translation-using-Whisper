@@ -1,3 +1,4 @@
+pip==23.3.1
 openai-whisper
 #pycairo
 sounddevice
