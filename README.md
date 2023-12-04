@@ -1,4 +1,4 @@
-# Whisper-RealTime-Translation
+# Description
 - This is a simple language translation application built using Streamlit.
   The application allows users to record speech, transcribe it using the Whisper ASR (Automatic Speech Recognition) model, translate the transcribed text into a selected language, and play back the translated text using the Elevenlabs TTS (Text-to-Speech) engine.
 
