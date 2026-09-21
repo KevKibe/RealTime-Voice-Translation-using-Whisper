@@ -1,7 +1,7 @@
 openai-whisper==20250625
 sounddevice==0.5.6
 wavio==0.0.9
-scipy==1.18.1
+scipy==1.17.1
 elevenlabs==2.68.0
 python-dotenv==1.2.3
 google-cloud==0.34.0
