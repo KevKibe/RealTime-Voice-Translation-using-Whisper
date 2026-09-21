@@ -55,3 +55,18 @@ def test_translate_returns_error_message_on_request_exception(monkeypatch):
     result = translator.translate("hello", "es")
 
     assert result == "Error: network down"
+
+
+def test_translate_propagates_non_request_exception(monkeypatch):
+    from text_translate import Translator
+    import pytest
+
+    def fake_post(url, json):
+        raise ValueError("unexpected")
+
+    monkeypatch.setattr("text_translate.requests.post", fake_post)
+
+    translator = Translator("https://example.com/translate")
+
+    with pytest.raises(ValueError, match="unexpected"):
+        translator.translate("hello", "es")
