@@ -2,7 +2,6 @@ openai-whisper
 sounddevice
 wavio
 scipy>=1.13.1
-pyaudio
 elevenlabs>=1.7.0
 python-dotenv>=1.0.1
 google-cloud
@@ -16,4 +15,3 @@ requests>=2.32.3
 RealtimeTTS
 streamlit>=1.39.0
 playsound==1.2.2
-pygobject
