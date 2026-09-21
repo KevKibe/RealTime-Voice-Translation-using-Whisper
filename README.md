@@ -32,6 +32,7 @@ streamlit run app.py
 ## Running Tests
 Run the test suite with:
 ```
+pip install -r requirements-test.txt
 pytest -q
 ```
 

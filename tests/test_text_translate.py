@@ -1,6 +1,3 @@
-from text_translate import Translator
-
-
 class MockResponse:
     def __init__(self, status_code, payload=None, text=""):
         self.status_code = status_code
@@ -12,6 +9,8 @@ class MockResponse:
 
 
 def test_translate_returns_json_on_success(monkeypatch):
+    from text_translate import Translator
+
     captured = {}
 
     def fake_post(url, json):
@@ -30,6 +29,8 @@ def test_translate_returns_json_on_success(monkeypatch):
 
 
 def test_translate_returns_error_message_on_failure(monkeypatch):
+    from text_translate import Translator
+
     def fake_post(url, json):
         return MockResponse(500, text="internal error")
 
