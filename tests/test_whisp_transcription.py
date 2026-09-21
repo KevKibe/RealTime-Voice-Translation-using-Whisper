@@ -61,6 +61,7 @@ def _load_module_with_stubs(monkeypatch):
 
     scipy_module = types.ModuleType("scipy")
     scipy_io_module = types.ModuleType("scipy.io")
+    numpy_module = types.ModuleType("numpy")
 
     monkeypatch.setitem(sys.modules, "whisper", whisper_module)
     monkeypatch.setitem(sys.modules, "sounddevice", sd_module)
@@ -68,6 +69,7 @@ def _load_module_with_stubs(monkeypatch):
     monkeypatch.setitem(sys.modules, "scipy", scipy_module)
     monkeypatch.setitem(sys.modules, "scipy.io", scipy_io_module)
     monkeypatch.setitem(sys.modules, "scipy.io.wavfile", wavfile_module)
+    monkeypatch.setitem(sys.modules, "numpy", numpy_module)
 
     sys.modules.pop("whisp_transcription", None)
     module = importlib.import_module("whisp_transcription")
