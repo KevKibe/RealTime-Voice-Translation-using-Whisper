@@ -28,3 +28,12 @@ Execute the following command to run the Streamlit app:
 ```
 streamlit run app.py
 ```
+
+## Running Tests
+Run the test suite with:
+```
+pytest -q
+```
+
+## Pull Request Test Check
+A GitHub Actions workflow is included at `.github/workflows/tests.yml` and runs tests automatically on pull requests before merge.
