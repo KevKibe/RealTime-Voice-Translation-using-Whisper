@@ -3,6 +3,12 @@ import sys
 import types
 
 
+def test_module_imports_without_heavy_runtime_dependencies():
+    sys.modules.pop("whisp_transcription", None)
+    module = importlib.import_module("whisp_transcription")
+    assert hasattr(module, "WhisperTranscriber")
+
+
 def _load_module_with_stubs(monkeypatch):
     state = {
         "loaded_model": None,

@@ -17,4 +17,3 @@ RealtimeTTS
 streamlit>=1.39.0
 playsound==1.2.2
 pygobject
-pytest>=8.3.3
