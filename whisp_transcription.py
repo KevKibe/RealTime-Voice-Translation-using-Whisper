@@ -1,10 +1,3 @@
-import whisper
-import numpy as np
-import sounddevice as sd
-from playsound import playsound
-import scipy.io.wavfile as wav
-
-
 class WhisperTranscriber:
     def __init__(self, model="tiny"):
         """
@@ -12,9 +5,13 @@ class WhisperTranscriber:
 
         :param model: The path to the Whisper ASR model. Defaults to "tiny".
         """
+        import whisper
+
         self.model = whisper.load_model(model)
 
     def play_ding_sound(self, sound_file):
+        from playsound import playsound
+
         playsound(sound_file)
 
     def transcribe(self, duration=10, fs=44100):
@@ -25,6 +22,9 @@ class WhisperTranscriber:
         :param target_language: The target language code for translation. Defaults to 'en' (English).
         :return: The transcribed and translated text.
         """
+        import sounddevice as sd
+        import scipy.io.wavfile as wav
+
         self.play_ding_sound("notification-sound-7062.wav")
         print("Recording...")
         myrecording = sd.rec(int(duration * fs), samplerate=fs, channels=1)
