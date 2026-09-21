@@ -30,6 +30,7 @@ jobs:
         run: |
           python -c "import text_translate"
           python -c "import whisp_transcription"
+          python -c "import importlib.metadata as m; [m.version(p) for p in ('openai-whisper', 'sounddevice', 'playsound', 'scipy')]"
 
   test:
     if: github.event_name != 'pull_request' || github.event.pull_request.draft == false
