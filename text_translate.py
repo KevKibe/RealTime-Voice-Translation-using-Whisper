@@ -9,8 +9,10 @@ class Translator:
             'text': text,
             'target_language': target_language
         }
-
-        response = requests.post(self.api_url, json=data)
+        try:
+            response = requests.post(self.api_url, json=data)
+        except requests.RequestException as e:
+            return f'Error: {e}'
 
         if response.status_code == 200:
             return response.json()

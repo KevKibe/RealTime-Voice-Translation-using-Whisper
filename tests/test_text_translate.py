@@ -40,3 +40,18 @@ def test_translate_returns_error_message_on_failure(monkeypatch):
     result = translator.translate("hello", "es")
 
     assert result == "Error: 500, internal error"
+
+
+def test_translate_returns_error_message_on_request_exception(monkeypatch):
+    from text_translate import Translator
+    import requests
+
+    def fake_post(url, json):
+        raise requests.RequestException("network down")
+
+    monkeypatch.setattr("text_translate.requests.post", fake_post)
+
+    translator = Translator("https://example.com/translate")
+    result = translator.translate("hello", "es")
+
+    assert result == "Error: network down"
